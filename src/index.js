@@ -1,17 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react';                     //- IMPORTEI O REACT, (sempre componentes react começam com letra MAIUSCULA)
+import ReactDOM from 'react-dom/client';       // 1- esses 3 ja vieram
+import GlobalStyle from './globalStyle';
+//import Home from './Pages/Home';             //- SE FOSSE SÓ UMA PAGINA EU IMPORTARIA ASSIM 
+//import Users from './Pages/Users' 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import Routes from './routes';                 //- COMO É MAIS DE UMA ROTA(PAGINA), ESTOU IMPORTANDO AS ROTAS
+
+const root = ReactDOM.createRoot(document.getElementById('root')); // 2- criei esta função para importar o APP
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+ <> <Routes /> <GlobalStyle/> </>             // <> </> isto serve para englobar nossa importação, se fosse só o App não precisaria
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+
